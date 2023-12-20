@@ -1,0 +1,58 @@
+{
+    "name": "Stock_Deep__2023_11_28_16_00_01",
+    "id": "stock_deep",
+    "cuda": false,
+    "gpu": 0,
+    "data_loader": {
+        "data_dir": "../../data/",
+        "file_name": "50_data.csv",
+        "batch_size": 9,
+        "target": "49",
+        "quantize": false,
+        "shuffle": true
+    },
+    "validation": {
+        "validation_split": 0.0,
+        "shuffle": true
+    },
+    "lr_scheduler_type": "ExponentialLR",
+    "lr_scheduler_freq": 10,
+    "lr_scheduler": {
+        "gamma": 0.99
+    },
+    "optimizer_type": "Adam",
+    "optimizer": {
+        "lr": 0.001,
+        "weight_decay": 0
+    },
+    "loss": "BCE_loss",
+    "metrics": [
+        "my_metric"
+    ],
+    "trainer": {
+        "epochs": 40,
+        "save_dir": "../../stored_models/",
+        "save_freq": 50,
+        "log_step": 100,
+        "verbosity": 2,
+        "monitor": "val_loss",
+        "monitor_mode": "min"
+    },
+    "arch": "Deep_NN",
+    "model": {
+        "layers": [
+            100,
+            20
+        ],
+        "inputs": [
+            49
+        ],
+        "outputs": [
+            1
+        ]
+    },
+    "domains": {
+        "epsilon": 0.001,
+        "set_interval_domain": false
+    }
+}
