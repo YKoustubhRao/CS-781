@@ -1,0 +1,4 @@
+Original:
+1. Set the config file in configs, create your model in model.py
+2. (base) koustubh@LmnOP:~/CS_781/project/encodings/training$ python train.py -c ./configs/stock_data.json &> out.txt
+3. (base) koustubh@LmnOP:~/CS_781/project/encodings/training$ python train.py -e /home/koustubh/CS_781/project/stored_models/Stock_Deep__2023_11_28_16_00_01/model_last.pth.tar &> out.txt
